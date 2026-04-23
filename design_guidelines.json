@@ -1,0 +1,129 @@
+{
+  "project_name": "Ride N' Nice",
+  "theme_and_archetype": {
+    "theme": "Dark/Light Hybrid",
+    "archetype": "Archetype 4: Swiss & High-Contrast",
+    "description": "Strictly monochrome (Black & White). Raw, tuning/stance, editorial/racing aesthetic. Cinematic, rebellious, automotive zine meets racing poster."
+  },
+  "global_styles": {
+    "colors": {
+      "primary_black": "#050505",
+      "pure_black": "#000000",
+      "dark_gray": "#1A1A1A",
+      "medium_gray": "#666666",
+      "light_gray": "#E5E5E5",
+      "pure_white": "#FFFFFF"
+    },
+    "typography": {
+      "rules": "Use ultra-condensed/bold fonts for headings, monospace for stats/metadata, and a clean sans-serif for body. NO italics unless explicitly needed for a 'speed' effect.",
+      "font_families": {
+        "heading": "'Anton', sans-serif",
+        "body": "'Manrope', sans-serif",
+        "mono": "'JetBrains Mono', monospace"
+      },
+      "scales": {
+        "h1": "text-6xl md:text-8xl lg:text-[10rem] uppercase tracking-tighter leading-none",
+        "h2": "text-5xl md:text-7xl uppercase tracking-tighter leading-none",
+        "h3": "text-3xl md:text-4xl uppercase tracking-tight",
+        "body": "text-base md:text-lg text-light_gray font-light leading-relaxed",
+        "mono_labels": "text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-medium_gray"
+      }
+    },
+    "layout_and_spacing": {
+      "grid": "Asymmetric bento layouts. Heavy use of negative space.",
+      "borders": "Thick horizontal rules (border-b-2 or border-b-4 border-pure_white/20). Sharp corners ONLY (rounded-none).",
+      "padding": "Generous spacing. py-24 md:py-40 for sections."
+    },
+    "visual_effects": {
+      "image_treatment": "MANDATORY: ALL images must have 'grayscale contrast-125' Tailwind classes to enforce the monochrome zine aesthetic.",
+      "texture": "Global noise/grain overlay (pointer-events-none, fixed, mix-blend-difference, opacity-10).",
+      "hover_states": "Invert colors on hover (bg-pure_white text-pure_black) for buttons and cards. Aggressive scale transforms for images (hover:scale-105 duration-700).",
+      "animations": "Lenis for smooth scrolling. Framer Motion for staggered reveals. CSS glitch effect for primary headings.",
+      "patterns": "Subtle checkered flag patterns using CSS repeating-linear-gradient or SVG backgrounds in specific gaps."
+    }
+  },
+  "sections_blueprint": {
+    "hero": {
+      "layout": "100vh height. Massive logo asset centered. Heavy grain. 'Start-light' sequence or RPM gauge animated on load.",
+      "components": "Marquee scrolling text at the bottom: 'RIDE N' NICE • FAMILY • SINCE 20XX'. Background features a darkened, high-contrast video/image with speed lines.",
+      "testid": "hero-section"
+    },
+    "sobre_nosotros": {
+      "layout": "Split asymmetric layout. Left: Massive 'LA FAMILIA' vertical text. Right: Editorial paragraphs about the crew, with a staggered overlapping image.",
+      "components": "Tachometer line divider (0 to 9000 RPM styling) separating this section.",
+      "testid": "about-section"
+    },
+    "rutas": {
+      "layout": "Full width overflow. Large heading 'RUTAS'.",
+      "components": "Embla/Shadcn Carousel. Cards feature large grayscale image, mono-font route specs (Distancia, Fecha, Dificultad), thick borders, inverted hover state.",
+      "testid": "routes-carousel-section"
+    },
+    "galeria_de_coches": {
+      "layout": "Masonry or diagonal bento grid. Images must feel dense and cinematic.",
+      "components": "Hover effects: images zoom slowly, displaying driver/car specs (e.g., 'Honda CRX / Stance') in a brutalist mono tag.",
+      "testid": "car-gallery-section"
+    },
+    "proximos_eventos": {
+      "layout": "List-based timeline layout. Left column: Date (Mono font). Right column: Event Title and Location (Heading font). Thick borders between rows.",
+      "components": "Interactive rows that reveal an image or map on hover.",
+      "testid": "events-timeline-section"
+    },
+    "redes_sociales": {
+      "layout": "Massive typography links taking up full viewport width. e.g., 'INSTAGRAM ↗', 'YOUTUBE ↗'.",
+      "components": "Hovering over text reveals a floating image cursor effect or strikes through the text.",
+      "testid": "social-links-section"
+    },
+    "unete_al_grupo": {
+      "layout": "Brutalist form layout. 2-column on desktop. Left: 'ÚNETE A LA CREW'. Right: The form.",
+      "components": "Inputs: border-b-2 ONLY, no side/top borders. bg-transparent. focus:border-pure_white. Submit button: massive, full width, inverted colors on hover.",
+      "testid": "join-form-section"
+    }
+  },
+  "media_assets": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_67ad8016-375b-4928-aa2e-95dbbef62645/artifacts/7xwuddjp_image.png",
+      "usage": "Hero section and Header/Nav"
+    },
+    "hero_bg": {
+      "url": "https://images.unsplash.com/photo-1733136372735-01712acce177?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxibGFjayUyMGFuZCUyMHdoaXRlJTIwcmFjZSUyMHRyYWNrJTIwYXNwaGFsdHxlbnwwfHx8fDE3NzY5Nzc2NTF8MA&ixlib=rb-4.1.0&q=85",
+      "usage": "Hero background or parallax transition background"
+    },
+    "gallery_and_carousel": [
+      {
+        "url": "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/3esct8o4_imgi_24_649218687_18066629003658638_285689954559967077_n.jpg",
+        "usage": "Rutas Carousel Image 1 / Galeria"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/52gppsd4_imgi_54_656334269_18071284472247230_2427745737114541830_n.jpg",
+        "usage": "Rutas Carousel Image 2 / Galeria"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/ri29zmz6_imgi_26_627369271_18040260737729504_3447686699424907670_n.jpg",
+        "usage": "Sobre Nosotros feature image / Galeria"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/rbt3uzrp_imgi_41_584048082_4064844670404692_6848023895902328188_n.jpg",
+        "usage": "Galeria Feature / Proximos Eventos hover image"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/fli5fap1_imgi_20_648657963_18046550297734064_6525923687999584452_n.jpg",
+        "usage": "Galeria Feature / Unete background element"
+      },
+      {
+        "url": "https://images.pexels.com/photos/19227069/pexels-photo-19227069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "usage": "Texture/Detail image for transitions or bento filler"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Maintain strict monochrome (black/white) palette. Do not add any color accents.",
+    "Use raw HTML/Tailwind for structural layout instead of restrictive components.",
+    "Apply 'filter: grayscale(100%) contrast(120%)' to all images via Tailwind ('grayscale contrast-125').",
+    "Install and use 'react-fast-marquee' for the scrolling text elements.",
+    "Install and use 'lucide-react' for UI icons (like arrows).",
+    "Install '@radix-ui/react-icons' or 'lucide-react' if needed, but rely mostly on typography.",
+    "Use 'framer-motion' for staggered text reveals and parallax effects.",
+    "Ensure the Form in 'Unete al Grupo' works with a standard backend POST handler or mock.",
+    "Add 'data-testid' to all interactive elements as specified."
+  ]
+}
