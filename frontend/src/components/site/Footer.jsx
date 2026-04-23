@@ -23,8 +23,8 @@ export default function Footer() {
           <ul className="flex flex-col gap-2 font-display text-xl uppercase tracking-tight">
             <li><a href="#sobre-nosotros" className="hover:text-white">Sobre nosotros</a></li>
             <li><a href="#rutas" className="hover:text-white">Rutas</a></li>
-            <li><a href="#galeria" className="hover:text-white">Garage</a></li>
             <li><a href="#eventos" className="hover:text-white">Eventos</a></li>
+            <li><a href="#redes" className="hover:text-white">Redes</a></li>
           </ul>
         </div>
 

@@ -118,8 +118,8 @@ export const SOCIALS = [
 
 // Stats counters
 export const STATS = [
-  { value: 48, label: "MIEMBROS" },
-  { value: 127, label: "RUTAS HECHAS" },
-  { value: 22, label: "QUEDADAS / AÑO" },
+  { value: 660, label: "MIEMBROS" },
+  { value: 127, label: "RUTAS" },
+  { value: 22, label: "QUEDADAS" },
   { value: 2020, label: "DESDE" },
 ];

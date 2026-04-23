@@ -4,7 +4,6 @@ import Nav from "../components/site/Nav";
 import Hero from "../components/site/Hero";
 import About from "../components/site/About";
 import RoutesCarousel from "../components/site/RoutesCarousel";
-import Gallery from "../components/site/Gallery";
 import Events from "../components/site/Events";
 import Social from "../components/site/Social";
 import Join from "../components/site/Join";
@@ -16,7 +15,6 @@ const API = `${BACKEND_URL}/api`;
 
 export default function Landing() {
   useEffect(() => {
-    // Light ping to warm up backend; non-blocking.
     axios.get(`${API}/`).catch(() => {});
   }, []);
 
@@ -29,7 +27,6 @@ export default function Landing() {
         <Hero />
         <About />
         <RoutesCarousel />
-        <Gallery />
         <Events />
         <Social />
         <Join />

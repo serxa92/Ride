@@ -34,12 +34,12 @@ export default function RoutesCarousel() {
     <section
       id="rutas"
       data-testid="routes-carousel-section"
-      className="relative bg-ink-950 py-24 md:py-40 border-t border-ink-700"
+      className="relative bg-ink-950 py-20 md:py-32 border-t border-ink-700"
     >
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10 mb-12 md:mb-16">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-10 mb-10 md:mb-14">
         <div className="flex items-end justify-between mb-6">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-300">
-            § 02 / Catálogo de rutas
+            § 02 / Carretera &amp; Fotos
           </span>
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-500">
             {String(selected + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
@@ -77,14 +77,14 @@ export default function RoutesCarousel() {
                 key={r.id}
                 data-testid={`route-card-${r.id}`}
                 data-cursor="hover"
-                className="relative flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_46%] lg:flex-[0_0_36%] group"
+                className="relative flex-[0_0_88%] sm:flex-[0_0_60%] md:flex-[0_0_46%] lg:flex-[0_0_36%] group"
               >
                 <div className="relative overflow-hidden border border-ink-700 bg-ink-900">
                   <div className="aspect-[4/5] overflow-hidden">
                     <img
                       src={r.image}
                       alt={r.title}
-                      className="w-full h-full object-cover mono-img group-hover:scale-105 transition-transform duration-[1200ms]"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]"
                     />
                   </div>
 
@@ -94,7 +94,7 @@ export default function RoutesCarousel() {
                       {r.code}
                     </span>
                     <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/90 bg-black/50 backdrop-blur px-2.5 py-1.5 border border-white/20">
-                      {r.difficulty}
+                      {r.date}
                     </span>
                   </div>
 
@@ -108,34 +108,6 @@ export default function RoutesCarousel() {
                     <h3 className="font-display uppercase tracking-tight text-2xl md:text-3xl leading-none">
                       {r.title}
                     </h3>
-                  </div>
-                </div>
-
-                {/* Specs row */}
-                <div className="mt-4 grid grid-cols-3 border border-ink-700 divide-x divide-ink-700">
-                  <div className="p-3 md:p-4">
-                    <div className="font-mono text-[9px] tracking-[0.25em] uppercase text-ink-300">
-                      Distancia
-                    </div>
-                    <div className="font-display text-xl md:text-2xl mt-1">
-                      {r.distance}
-                    </div>
-                  </div>
-                  <div className="p-3 md:p-4">
-                    <div className="font-mono text-[9px] tracking-[0.25em] uppercase text-ink-300">
-                      Duración
-                    </div>
-                    <div className="font-display text-xl md:text-2xl mt-1">
-                      {r.duration}
-                    </div>
-                  </div>
-                  <div className="p-3 md:p-4">
-                    <div className="font-mono text-[9px] tracking-[0.25em] uppercase text-ink-300">
-                      Fecha
-                    </div>
-                    <div className="font-display text-xl md:text-2xl mt-1">
-                      {r.date}
-                    </div>
                   </div>
                 </div>
 
@@ -158,7 +130,7 @@ export default function RoutesCarousel() {
               onClick={scrollPrev}
               data-testid="routes-prev"
               data-cursor="hover"
-              aria-label="Previous route"
+              aria-label="Anterior"
               className="w-14 h-14 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors"
             >
               <ArrowLeft size={18} />
@@ -167,7 +139,7 @@ export default function RoutesCarousel() {
               onClick={scrollNext}
               data-testid="routes-next"
               data-cursor="hover"
-              aria-label="Next route"
+              aria-label="Siguiente"
               className="w-14 h-14 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors"
             >
               <ArrowRight size={18} />
@@ -179,7 +151,7 @@ export default function RoutesCarousel() {
               <button
                 key={i}
                 onClick={() => emblaApi && emblaApi.scrollTo(i)}
-                aria-label={`Go to route ${i + 1}`}
+                aria-label={`Ir a la foto ${i + 1}`}
                 data-testid={`routes-dot-${i}`}
                 className={`h-[2px] transition-all duration-500 ${
                   selected === i ? "w-10 bg-white" : "w-4 bg-ink-500"

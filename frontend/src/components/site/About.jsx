@@ -41,10 +41,10 @@ export default function About() {
     <section
       id="sobre-nosotros"
       data-testid="about-section"
-      className="relative bg-ink-950 py-24 md:py-40 overflow-hidden"
+      className="relative bg-ink-950 py-20 md:py-32 overflow-hidden"
     >
       {/* Tacho rule */}
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10 mb-16 md:mb-24">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-10 mb-12 md:mb-20">
         <div className="flex items-end justify-between mb-4">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-300">
             § 01 / Sobre nosotros
@@ -62,7 +62,6 @@ export default function About() {
             transition={{ duration: 1.2, ease: [0.2, 0.7, 0.1, 1] }}
             className="absolute inset-y-0 left-0 bg-white origin-left w-full"
           />
-          {/* RPM ticks */}
           <div className="absolute -bottom-5 left-0 right-0 flex justify-between font-mono text-[9px] tracking-[0.2em] text-ink-500 uppercase">
             <span>0</span>
             <span>2k</span>
@@ -73,31 +72,26 @@ export default function About() {
         </div>
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10 grid grid-cols-12 gap-6 md:gap-10">
-        {/* Vertical huge text */}
-        <div className="col-span-12 md:col-span-4 flex md:items-start md:justify-start">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-10 grid grid-cols-12 gap-8 md:gap-10 items-start">
+        {/* Heading */}
+        <div className="col-span-12 md:col-span-5 lg:col-span-4">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="md:sticky md:top-28"
           >
-            <h2 className="font-display uppercase leading-[0.82] tracking-tighter text-6xl sm:text-7xl md:text-8xl">
-              LA
-              <br />
-              <span className="text-ink-500">FAMI</span>
-              <br />
-              LIA
+            <h2 className="font-display uppercase leading-[0.85] tracking-tighter text-5xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap">
+              LA FAMILIA
             </h2>
-            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-300 mt-6">
+            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-300 mt-5">
               Crew · No Ego · All Love
             </p>
           </motion.div>
         </div>
 
         {/* Body */}
-        <div className="col-span-12 md:col-span-5 flex flex-col gap-8">
+        <div className="col-span-12 md:col-span-7 lg:col-span-5 flex flex-col gap-6">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -125,30 +119,10 @@ export default function About() {
             respeto y te gustan los viajes largos, ya eres uno de los
             nuestros.
           </motion.p>
-
-          {/* Stats */}
-          <div
-            data-testid="about-stats"
-            className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-ink-700 border border-ink-700 mt-6"
-          >
-            {STATS.map((s) => (
-              <div
-                key={s.label}
-                className="bg-ink-950 p-5 md:p-7 flex flex-col gap-2"
-              >
-                <span className="font-display text-4xl md:text-6xl leading-none tracking-tight">
-                  <Counter value={s.value} />
-                </span>
-                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-ink-300">
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Image */}
-        <div className="col-span-12 md:col-span-3">
+        <div className="col-span-12 lg:col-span-3">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +134,7 @@ export default function About() {
             <img
               src={IMG.crx}
               alt="Crew car"
-              className="w-full h-[440px] md:h-[520px] object-cover mono-img group-hover:scale-105 transition-transform duration-[1200ms]"
+              className="w-full h-[320px] md:h-[440px] lg:h-[520px] object-cover mono-img group-hover:scale-105 transition-transform duration-[1200ms]"
             />
             <div className="absolute inset-x-0 bottom-0 p-4 flex items-end justify-between bg-gradient-to-t from-black/80 to-transparent">
               <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-100">
@@ -171,6 +145,32 @@ export default function About() {
               <span className="w-2.5 h-2.5 bg-white block" />
             </div>
           </motion.div>
+        </div>
+      </div>
+
+      {/* Stats — full width strip */}
+      <div className="max-w-[1600px] mx-auto px-6 md:px-10 mt-16 md:mt-24">
+        <div
+          data-testid="about-stats"
+          className="grid grid-cols-2 md:grid-cols-4 border border-ink-700 divide-y md:divide-y-0 md:divide-x divide-ink-700"
+        >
+          {STATS.map((s, i) => (
+            <div
+              key={s.label}
+              className={`bg-ink-950 p-6 md:p-10 flex flex-col gap-3 ${
+                i < 2 ? "border-b md:border-b-0 border-ink-700" : ""
+              } ${i === 1 ? "border-l md:border-l-0 border-ink-700" : ""} ${
+                i === 3 ? "border-l md:border-l-0 border-ink-700" : ""
+              }`}
+            >
+              <span className="font-display text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight">
+                <Counter value={s.value} />
+              </span>
+              <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-ink-300">
+                {s.label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

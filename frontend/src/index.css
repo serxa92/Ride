@@ -280,13 +280,13 @@
     scrollbar-width: none;
 }
 
-/* Image treatment */
+/* Image treatment — COLOR con leve contraste cinematográfico */
 .mono-img {
-    filter: grayscale(1) contrast(1.15) brightness(0.92);
+    filter: contrast(1.08) saturate(1.05);
     transition: filter 700ms ease;
 }
 .mono-img:hover {
-    filter: grayscale(1) contrast(1.3) brightness(1);
+    filter: contrast(1.18) saturate(1.15) brightness(1.02);
 }
 
 /* Speed lines */

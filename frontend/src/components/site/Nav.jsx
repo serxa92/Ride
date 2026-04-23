@@ -5,7 +5,6 @@ import { LOGO_URL } from "../../lib/data";
 const LINKS = [
   { label: "SOBRE NOSOTROS", to: "#sobre-nosotros" },
   { label: "RUTAS", to: "#rutas" },
-  { label: "GALERÍA", to: "#galeria" },
   { label: "EVENTOS", to: "#eventos" },
   { label: "REDES", to: "#redes" },
 ];
