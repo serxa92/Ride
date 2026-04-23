@@ -6,7 +6,6 @@ import About from "../components/site/About";
 import Gallery from "../components/site/Gallery";
 import Merch from "../components/site/Merch";
 import Social from "../components/site/Social";
-import Join from "../components/site/Join";
 import Footer from "../components/site/Footer";
 import Cursor from "../components/site/Cursor";
 
@@ -29,7 +28,6 @@ export default function Landing() {
         <Gallery />
         <Merch />
         <Social />
-        <Join />
       </main>
       <Footer />
     </div>

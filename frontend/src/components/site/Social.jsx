@@ -56,13 +56,13 @@ export default function Social() {
               href={s.href}
               target="_blank"
               rel="noreferrer noopener"
-              className="flex items-center justify-between gap-6"
+              className="flex items-center justify-between gap-3 md:gap-6"
             >
-              <div className="flex items-baseline gap-4 md:gap-6 overflow-hidden">
-                <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-ink-300">
+              <div className="flex items-baseline gap-2 sm:gap-4 md:gap-6 overflow-hidden min-w-0">
+                <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-ink-300 shrink-0">
                   / 0{i + 1}
                 </span>
-                <span className="font-display uppercase leading-[0.85] tracking-tighter text-5xl sm:text-7xl md:text-[8rem] group-hover:[text-shadow:2px_2px_0_#fff,_-2px_-2px_0_#fff] transition-all duration-200 relative">
+                <span className="font-display uppercase leading-[0.85] tracking-tighter text-4xl sm:text-6xl md:text-[8rem] group-hover:[text-shadow:2px_2px_0_#fff,_-2px_-2px_0_#fff] transition-all duration-200 relative truncate">
                   {s.label}
                 </span>
               </div>
@@ -71,8 +71,9 @@ export default function Social() {
                 <span className="hidden md:inline font-mono text-xs tracking-[0.25em] uppercase text-ink-300">
                   {s.handle}
                 </span>
-                <span className="w-12 h-12 md:w-16 md:h-16 border border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
-                  <ArrowUpRight size={18} />
+                <span className="w-11 h-11 md:w-16 md:h-16 border border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+                  <ArrowUpRight size={16} className="md:hidden" />
+                  <ArrowUpRight size={18} className="hidden md:inline" />
                 </span>
               </div>
             </a>

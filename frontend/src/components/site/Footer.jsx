@@ -10,7 +10,7 @@ export default function Footer() {
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 py-14 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-5 flex flex-col gap-4">
-          <img src={LOGO_URL} alt="Ride N' Nice" className="h-10 w-auto" />
+          <img src={LOGO_URL} alt="Ride N' Nice" className="h-16 md:h-20 w-auto self-start" />
           <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-300 max-w-sm">
             Ride N' Nice · Crew · Familia · Desde 2020. Carretera, coches
             y gente buena.

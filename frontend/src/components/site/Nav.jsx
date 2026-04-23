@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { LOGO_URL } from "../../lib/data";
+import { Menu, X, MessageCircle } from "lucide-react";
+import { LOGO_URL, WHATSAPP_URL } from "../../lib/data";
 
 const LINKS = [
   { label: "SOBRE NOSOTROS", to: "#sobre-nosotros" },
@@ -28,19 +28,19 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1600px] mx-auto flex items-center justify-between px-6 md:px-10 py-4 md:py-5">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 md:py-5 gap-3">
         <a
           href="#top"
           data-testid="nav-logo"
           data-cursor="hover"
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-3 group shrink-0"
         >
           <img
             src={LOGO_URL}
             alt="Ride N' Nice"
-            className="h-8 md:h-10 w-auto"
+            className="h-7 md:h-10 w-auto"
           />
-          <span className="hidden sm:inline font-mono text-[10px] tracking-[0.3em] text-ink-300 uppercase">
+          <span className="hidden md:inline font-mono text-[10px] tracking-[0.3em] text-ink-300 uppercase">
             Est. 2020 / Crew
           </span>
         </a>
@@ -59,18 +59,20 @@ export default function Nav() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
-            href="#unete"
-            data-testid="nav-cta-join"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer noopener"
+            data-testid="nav-cta-wa"
             data-cursor="hover"
-            className="hidden sm:inline-flex items-center gap-2 border border-white px-5 py-2.5 font-mono text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-colors duration-300"
+            className="group hidden sm:inline-flex items-center gap-2 border border-white px-4 md:px-5 py-2 md:py-2.5 font-mono text-[10px] md:text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-colors"
           >
-            Únete
-            <span className="w-1.5 h-1.5 bg-white rounded-full group-hover:bg-black" />
+            <MessageCircle size={14} />
+            WhatsApp
           </a>
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 -mr-2"
             onClick={() => setOpen((v) => !v)}
             data-testid="nav-mobile-toggle"
             aria-label="Menu"
@@ -85,25 +87,28 @@ export default function Nav() {
           data-testid="nav-mobile-panel"
           className="lg:hidden bg-ink-950 border-t border-ink-700"
         >
-          <div className="flex flex-col px-6 py-6 gap-5">
+          <div className="flex flex-col px-6 py-6 gap-4">
             {LINKS.map((l) => (
               <a
                 key={l.to}
                 href={l.to}
                 onClick={() => setOpen(false)}
-                className="font-display text-3xl uppercase tracking-tight"
+                className="font-display text-2xl sm:text-3xl uppercase tracking-tight"
                 data-testid={`nav-mobile-link-${l.to.replace("#", "")}`}
               >
                 {l.label}
               </a>
             ))}
             <a
-              href="#unete"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer noopener"
               onClick={() => setOpen(false)}
-              className="mt-2 border border-white px-4 py-3 font-mono text-xs tracking-[0.25em] uppercase text-center"
-              data-testid="nav-mobile-cta-join"
+              className="mt-2 inline-flex items-center justify-center gap-2 border border-white px-4 py-3 font-mono text-xs tracking-[0.25em] uppercase text-center"
+              data-testid="nav-mobile-cta-wa"
             >
-              Únete a la crew
+              <MessageCircle size={14} />
+              Grupo de WhatsApp
             </a>
           </div>
         </div>

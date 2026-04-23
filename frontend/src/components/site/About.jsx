@@ -149,27 +149,23 @@ export default function About() {
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 mt-16 md:mt-24">
         <div
           data-testid="about-stats"
-          className="grid grid-cols-2 md:grid-cols-4 border border-ink-700"
+          className="grid grid-cols-2 md:grid-cols-4 border border-ink-700 divide-x divide-y md:divide-y-0 divide-ink-700"
         >
-          {STATS.map((s, i) => {
+          {STATS.map((s) => {
             const isNumber = typeof s.value === "number";
             return (
               <div
                 key={s.label}
-                className={`bg-ink-950 p-6 md:p-10 flex flex-col gap-3 border-ink-700 ${
-                  i % 2 === 1 ? "border-l" : ""
-                } ${i >= 2 ? "border-t md:border-t-0" : ""} ${
-                  i > 0 ? "md:border-l" : ""
-                }`}
+                className="bg-ink-950 p-5 md:p-10 flex flex-col gap-2 md:gap-3"
               >
-                <span className="font-display text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight">
+                <span className="font-display text-[42px] sm:text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight">
                   {isNumber ? <Counter value={s.value} /> : s.value}
                 </span>
-                <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-ink-300">
+                <span className="font-mono text-[9px] md:text-xs tracking-[0.2em] md:tracking-[0.25em] uppercase text-ink-300">
                   {s.label}
                 </span>
                 {s.sub && (
-                  <span className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-ink-500">
+                  <span className="font-mono text-[8px] md:text-[10px] tracking-[0.2em] md:tracking-[0.25em] uppercase text-ink-500">
                     {s.sub}
                   </span>
                 )}

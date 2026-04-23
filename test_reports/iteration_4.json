@@ -1,0 +1,29 @@
+{
+  "summary": "Iteration 4 validation — Ride N' Nice. Backend pytest 6/6 pass (GET /api/, POST /api/join valid + validation + persistence, GET /api/events). Frontend verified on desktop (1440x900), mobile (390x844) and iPhone SE (375x667). All review_request bullets pass: Join section fully removed (join-form-section, join-form, join-input-name, join-submit-button all null); Nav has nav-cta-wa and nav-mobile-cta-wa with href=https://chat.whatsapp.com/FliypGmR1S80FGFYvywcQE and target=_blank, no #unete anchors; Hero CTAs hero-cta-galeria (bg-white text-black, 'Ver galería') + hero-cta-wa (WA url) present, old hero-cta-join removed; Footer logo is h-16 md:h-20 (64px on mobile) using LOGO_URL; section order Hero→About→Gallery→Merch→Social(data-testid=social-links-section)→Footer with NO Join; no horizontal scroll at 390x844 or 375x667 at hero/about/gallery/merch/social/footer (scrollWidth==innerWidth at each); nav (bottom=62px) does not overlap hero start-lights (top=74px); stats animate to 660/MIEMBROS, 3/CONCENTRACIONES +4ª EN 2026, FINDES/QUEDADAS, 2020/DESDE; gallery card ~301px / 390px viewport (~77%) with neighbor peek, prev/next clickable; merch shows 2-col grid + 5 external anchors (4 products + PEDIR MERCH); social has 3 links (IG, TikTok, WA) with correct hrefs; mobile panel opens and lists 4 links + WA CTA (no Únete anywhere).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Social section uses data-testid='social-links-section' (not 'social-section'). Review request referenced 'social-section' — cosmetic naming inconsistency; recommend standardising all major section testids to the pattern <name>-section for the next testing agent.",
+    "Footer Explora / Crew HQ column headers have no data-testid; acceptable since they aren't interactive.",
+    "Join.jsx remains on disk as orphan (not imported anywhere). Consider deleting to keep the tree clean.",
+    "Backend /api/join endpoint is retained even though frontend no longer consumes it — OK per request. If permanent, document as 'reserved for future'.",
+    "Stats counter begins at 0 and animates when scrolled into view — confirmed reaches 660/3/2020. No regression from iteration 3."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "test_credentials": "N/A (no auth)",
+  "seed_data_creation": "Two TEST_ join records added by backend pytest (TEST_rider@example.com, TEST_rider2@example.com); harmless, same as prior iterations.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Public URL https://racing-routes.preview.emergentagent.com. Composition: Hero (data-testid hero-section) → About (about-section with about-stats grid) → Gallery (gallery-section + gallery-embla carousel + gallery-prev/gallery-next) → Merch (merch-section, 4 cards to Google Form + PEDIR MERCH CTA) → Social (social-links-section NOT social-section; social-list with 3 items: social-ig, social-tt, social-wa) → Footer (site-footer, h-16 md:h-20 logo + footer-wa-cta). Nav: site-nav, nav-cta-wa (desktop), nav-mobile-toggle + nav-mobile-panel + nav-mobile-cta-wa. WHATSAPP_URL = https://chat.whatsapp.com/FliypGmR1S80FGFYvywcQE. All mobile breakpoints (390, 375) have NO horizontal overflow. About stats animate in-view; wait ~2s after scrollIntoView before asserting values.",
+  "rca_of_the_issue": "No issues. All iteration 4 acceptance criteria satisfied. Mobile responsive regression fixes by E1 verified across 390x844 and 375x667; footer logo enlarged to h-16/h-20 using the latest LOGO_URL; Join removal complete; all Únete CTAs replaced with WhatsApp CTAs."
+}

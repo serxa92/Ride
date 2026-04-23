@@ -65,12 +65,12 @@ export default function Merch() {
                 0{i + 1}
               </span>
             </div>
-            <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 flex items-end justify-between bg-gradient-to-t from-black/85 via-black/30 to-transparent">
-              <div>
-                <span className="block font-display uppercase tracking-tight text-lg md:text-2xl leading-none">
+            <div className="absolute inset-x-0 bottom-0 p-3 md:p-5 flex items-end justify-between gap-2 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+              <div className="min-w-0">
+                <span className="block font-display uppercase tracking-tight text-base sm:text-xl md:text-2xl leading-none truncate">
                   {m.name}
                 </span>
-                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-ink-300 mt-2 block">
+                <span className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-ink-300 mt-2 block truncate">
                   {m.tagline}
                 </span>
               </div>
@@ -89,11 +89,13 @@ export default function Merch() {
           rel="noreferrer noopener"
           data-testid="merch-cta"
           data-cursor="hover"
-          className="group w-full md:w-auto inline-flex items-center justify-center gap-3 md:gap-5 border border-white px-6 md:px-10 py-5 md:py-7 font-display uppercase text-2xl md:text-4xl tracking-tight hover:bg-white hover:text-black transition-colors"
+          className="group w-full md:w-auto inline-flex items-center justify-center gap-3 md:gap-5 border border-white px-4 md:px-10 py-4 md:py-7 font-display uppercase text-xl sm:text-2xl md:text-4xl tracking-tight hover:bg-white hover:text-black transition-colors"
         >
-          <ShoppingBag size={22} />
+          <ShoppingBag size={20} className="md:hidden" />
+          <ShoppingBag size={22} className="hidden md:inline" />
           PEDIR MERCH
-          <ArrowUpRight size={22} />
+          <ArrowUpRight size={20} className="md:hidden" />
+          <ArrowUpRight size={22} className="hidden md:inline" />
         </a>
         <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-500 mt-4">
           Formulario Google · respuesta gestionada por el crew
