@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { Check, Loader2, AlertCircle } from "lucide-react";
+import { Check, Loader2, AlertCircle, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
-import { IMG } from "../../lib/data";
+import { IMG, WHATSAPP_URL } from "../../lib/data";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -100,6 +100,19 @@ export default function Join() {
                 <span className="w-6 h-px bg-white" /> Cualquier coche vale
               </li>
             </ul>
+
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              data-testid="join-wa-shortcut"
+              data-cursor="hover"
+              className="group mt-10 inline-flex items-center gap-3 border border-white px-5 py-4 font-mono text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-colors"
+            >
+              <MessageCircle size={16} />
+              Atajo · Grupo de WhatsApp
+              <span className="w-2 h-2 bg-white group-hover:bg-black transition-colors" />
+            </a>
           </div>
 
           <form

@@ -1,7 +1,7 @@
 // Media URLs and curated content for Ride N' Nice landing page.
 
 export const LOGO_URL =
-  "https://customer-assets.emergentagent.com/job_67ad8016-375b-4928-aa2e-95dbbef62645/artifacts/7xwuddjp_image.png";
+  "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/c7fnw3j3_Captura%20de%20pantalla%202026-04-23%20231952.png";
 
 export const HERO_BG =
   "https://images.unsplash.com/photo-1733136372735-01712acce177?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxibGFjayUyMGFuZCUyMHdoaXRlJTIwcmFjZSUyMHRyYWNrJTIwYXNwaGFsdHxlbnwwfHx8fDE3NzY5Nzc2NTF8MA&ixlib=rb-4.1.0&q=85";
@@ -19,82 +19,78 @@ export const IMG = {
     "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/fli5fap1_imgi_20_648657963_18046550297734064_6525923687999584452_n.jpg",
 };
 
-// Carousel — rutas
-export const ROUTES = [
+// Galería — fotos reales del crew
+export const GALLERY = [
   {
-    id: "r-01",
-    code: "R/01",
-    title: "Ruta de los Miradores",
-    region: "Rías Baixas · Galicia",
-    distance: "142 KM",
-    duration: "3H 20M",
-    difficulty: "MEDIA",
-    date: "17.01.2026",
+    id: "g-01",
+    code: "F/01",
     image: IMG.miata,
-    description:
-      "Asfalto mojado, niebla y curvas infinitas junto al Atlántico. La ruta que nació en una noche cualquiera y se volvió tradición.",
+    title: "Yellow Stance",
+    caption: "Mazda MX-5 NB saliendo con lluvia.",
   },
   {
-    id: "r-02",
-    code: "R/02",
-    title: "Subida a la Sierra",
-    region: "Ancares · Lugo",
-    distance: "96 KM",
-    duration: "2H 10M",
-    difficulty: "ALTA",
-    date: "08.02.2026",
+    id: "g-02",
+    code: "F/02",
     image: IMG.gti,
-    description:
-      "Rampa técnica, viraje tras viraje. Pocas rectas, mucha concentración. Café caliente arriba, adrenalina abajo.",
+    title: "GTI MK6",
+    caption: "Negro sobre adoquín, clásico OEM+.",
   },
   {
-    id: "r-03",
-    code: "R/03",
-    title: "Ruta Costera Nocturna",
-    region: "Paseo Atlántico · Vigo",
-    distance: "58 KM",
-    duration: "1H 30M",
-    difficulty: "BAJA",
-    date: "24.02.2026",
-    image: IMG.crx,
-    description:
-      "Salida al atardecer, faros encendidos, reflejo del mar. Kilómetros lentos para que las fotos salgan bien.",
-  },
-  {
-    id: "r-04",
-    code: "R/04",
-    title: "Amanecer en el Puente",
-    region: "Puente de Rande",
-    distance: "38 KM",
-    duration: "1H 00M",
-    difficulty: "BAJA",
-    date: "15.03.2026",
+    id: "g-03",
+    code: "F/03",
     image: IMG.honda,
-    description:
-      "Salir antes que el sol. Ver la ría teñirse de naranja mientras los motores se calientan en formación.",
+    title: "Accord JDM",
+    caption: "Ruedas doradas, negro profundo, vista al mar.",
   },
   {
-    id: "r-05",
-    code: "R/05",
-    title: "Meet Spring Rías",
-    region: "Playa de Samil",
-    distance: "— KM",
-    duration: "4H +",
-    difficulty: "MEET",
-    date: "26.04.2026",
+    id: "g-04",
+    code: "F/04",
+    image: IMG.crx,
+    title: "Del Sol Slam",
+    caption: "Slammed y elegante en una quedada cualquiera.",
+  },
+  {
+    id: "g-05",
+    code: "F/05",
     image: IMG.meet,
-    description:
-      "Sin ruta fija. Llegar, aparcar, abrir capós y dejar que el aire salado haga el resto. La familia al completo.",
+    title: "Crew Line-Up",
+    caption: "La familia al completo en concentración.",
   },
 ];
 
-// Galería — coches
-export const GALLERY = [
-  { id: "g-1", image: IMG.gti, tag: "VW GOLF GTI MK6", spec: "LOW / OEM+" },
-  { id: "g-2", image: IMG.honda, tag: "HONDA ACCORD CL7", spec: "JDM / GOLD" },
-  { id: "g-3", image: IMG.crx, tag: "HONDA DEL SOL", spec: "STANCE / SLAM" },
-  { id: "g-4", image: IMG.miata, tag: "MAZDA MX-5 NB", spec: "WIDEBODY / 1%" },
-  { id: "g-5", image: IMG.meet, tag: "CREW LINE-UP", spec: "MEET · FAMILY" },
+// Merchandising
+export const MERCH_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScLt7G-3DQ-7-OnGTeiq7hRPnMfpH_2hjzwQu-5tlHtwvg_Ug/viewform";
+
+export const MERCH = [
+  {
+    id: "m-patch",
+    name: "Parches bordados",
+    tagline: "Ride N' Nice · iron-on",
+    image:
+      "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/lupu62sp_Captura%20de%20pantalla%202026-04-23%20232330.png",
+  },
+  {
+    id: "m-stickers",
+    name: "Pegatinas / Stickers",
+    tagline: "Varios colores · pack",
+    image:
+      "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/22fdnkdb_Captura%20de%20pantalla%202026-04-23%20232321.png",
+  },
+  {
+    id: "m-caps",
+    name: "Gorras",
+    tagline: "Black · White · Trucker",
+    image:
+      "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/9bqnk776_Captura%20de%20pantalla%202026-04-23%20232312.png",
+  },
+  {
+    id: "m-jacket",
+    name: "Softshell Jacket",
+    tagline: "Edición oficial crew",
+    image:
+      "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/b1m8fkj7_Captura%20de%20pantalla%202026-04-23%20232258.png",
+  },
 ];
 
 // Marquee tickers
@@ -109,17 +105,33 @@ export const TICKERS = [
 ];
 
 // Social links
+export const WHATSAPP_URL = "https://chat.whatsapp.com/FliypGmR1S80FGFYvywcQE";
+
 export const SOCIALS = [
-  { id: "ig", label: "INSTAGRAM", handle: "@ride.n.nice", href: "https://instagram.com" },
-  { id: "tt", label: "TIKTOK", handle: "@ride.n.nice", href: "https://tiktok.com" },
-  { id: "yt", label: "YOUTUBE", handle: "Ride N' Nice", href: "https://youtube.com" },
-  { id: "wa", label: "WHATSAPP", handle: "Crew chat", href: "#unete" },
+  {
+    id: "ig",
+    label: "INSTAGRAM",
+    handle: "@ridennicegz",
+    href: "https://instagram.com/ridennicegz",
+  },
+  {
+    id: "tt",
+    label: "TIKTOK",
+    handle: "@ridennicegz",
+    href: "https://www.tiktok.com/@ridennicegz",
+  },
+  {
+    id: "wa",
+    label: "WHATSAPP",
+    handle: "Únete al grupo",
+    href: WHATSAPP_URL,
+  },
 ];
 
-// Stats counters
+// Stats — values can be numeric (animated counter) or string (shown as-is)
 export const STATS = [
   { value: 660, label: "MIEMBROS" },
-  { value: 127, label: "RUTAS" },
-  { value: 22, label: "QUEDADAS" },
+  { value: 3, label: "CONCENTRACIONES", sub: "+ 4ª EN 2026" },
+  { value: "FINDES", label: "QUEDADAS" },
   { value: 2020, label: "DESDE" },
 ];

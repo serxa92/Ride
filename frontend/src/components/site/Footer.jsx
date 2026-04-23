@@ -1,4 +1,4 @@
-import { LOGO_URL } from "../../lib/data";
+import { LOGO_URL, WHATSAPP_URL } from "../../lib/data";
 
 export default function Footer() {
   return (
@@ -10,9 +10,10 @@ export default function Footer() {
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 py-14 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-5 flex flex-col gap-4">
-          <img src={LOGO_URL} alt="Ride N' Nice" className="h-10 w-auto invert brightness-200" />
+          <img src={LOGO_URL} alt="Ride N' Nice" className="h-10 w-auto" />
           <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-300 max-w-sm">
-            Ride N' Nice — Crew · Familia · Desde 2020. Carretera, coches y gente buena.
+            Ride N' Nice · Crew · Familia · Desde 2020. Carretera, coches
+            y gente buena.
           </p>
         </div>
 
@@ -22,8 +23,8 @@ export default function Footer() {
           </h4>
           <ul className="flex flex-col gap-2 font-display text-xl uppercase tracking-tight">
             <li><a href="#sobre-nosotros" className="hover:text-white">Sobre nosotros</a></li>
-            <li><a href="#rutas" className="hover:text-white">Rutas</a></li>
-            <li><a href="#eventos" className="hover:text-white">Eventos</a></li>
+            <li><a href="#galeria" className="hover:text-white">Galería</a></li>
+            <li><a href="#merch" className="hover:text-white">Merch</a></li>
             <li><a href="#redes" className="hover:text-white">Redes</a></li>
           </ul>
         </div>
@@ -34,13 +35,16 @@ export default function Footer() {
           </h4>
           <p className="text-ink-100">Galicia · España</p>
           <p className="font-mono text-xs tracking-[0.2em] uppercase text-ink-300 mt-2">
-            42°14'26.2"N · 8°43'14.5"W
+            @ridennicegz · IG / TikTok
           </p>
           <a
-            href="#unete"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer noopener"
+            data-testid="footer-wa-cta"
             className="inline-block mt-6 border border-white px-5 py-3 font-mono text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-colors"
           >
-            Únete a la crew →
+            Únete al WhatsApp →
           </a>
         </div>
       </div>

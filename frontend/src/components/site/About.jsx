@@ -73,7 +73,6 @@ export default function About() {
       </div>
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 grid grid-cols-12 gap-8 md:gap-10 items-start">
-        {/* Heading */}
         <div className="col-span-12 md:col-span-5 lg:col-span-4">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -90,7 +89,6 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Body */}
         <div className="col-span-12 md:col-span-7 lg:col-span-5 flex flex-col gap-6">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -99,9 +97,9 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-ink-100 text-lg md:text-2xl leading-snug"
           >
-            Empezamos siendo cuatro. Hoy somos una cuadrilla que se junta los
-            viernes para reventar carreteras secundarias y los domingos para
-            tomar café viendo coches. <br />
+            Empezamos siendo cuatro. Hoy somos una cuadrilla que se junta
+            cada finde para reventar carreteras secundarias y los domingos
+            para tomar café viendo coches. <br />
             <span className="text-ink-300">
               Esto no es un club. Es una familia con motor.
             </span>
@@ -121,7 +119,6 @@ export default function About() {
           </motion.p>
         </div>
 
-        {/* Image */}
         <div className="col-span-12 lg:col-span-3">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -152,25 +149,33 @@ export default function About() {
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 mt-16 md:mt-24">
         <div
           data-testid="about-stats"
-          className="grid grid-cols-2 md:grid-cols-4 border border-ink-700 divide-y md:divide-y-0 md:divide-x divide-ink-700"
+          className="grid grid-cols-2 md:grid-cols-4 border border-ink-700"
         >
-          {STATS.map((s, i) => (
-            <div
-              key={s.label}
-              className={`bg-ink-950 p-6 md:p-10 flex flex-col gap-3 ${
-                i < 2 ? "border-b md:border-b-0 border-ink-700" : ""
-              } ${i === 1 ? "border-l md:border-l-0 border-ink-700" : ""} ${
-                i === 3 ? "border-l md:border-l-0 border-ink-700" : ""
-              }`}
-            >
-              <span className="font-display text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight">
-                <Counter value={s.value} />
-              </span>
-              <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-ink-300">
-                {s.label}
-              </span>
-            </div>
-          ))}
+          {STATS.map((s, i) => {
+            const isNumber = typeof s.value === "number";
+            return (
+              <div
+                key={s.label}
+                className={`bg-ink-950 p-6 md:p-10 flex flex-col gap-3 border-ink-700 ${
+                  i % 2 === 1 ? "border-l" : ""
+                } ${i >= 2 ? "border-t md:border-t-0" : ""} ${
+                  i > 0 ? "md:border-l" : ""
+                }`}
+              >
+                <span className="font-display text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight">
+                  {isNumber ? <Counter value={s.value} /> : s.value}
+                </span>
+                <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] uppercase text-ink-300">
+                  {s.label}
+                </span>
+                {s.sub && (
+                  <span className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-ink-500">
+                    {s.sub}
+                  </span>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

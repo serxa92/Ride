@@ -4,8 +4,8 @@ import { LOGO_URL } from "../../lib/data";
 
 const LINKS = [
   { label: "SOBRE NOSOTROS", to: "#sobre-nosotros" },
-  { label: "RUTAS", to: "#rutas" },
-  { label: "EVENTOS", to: "#eventos" },
+  { label: "GALERÍA", to: "#galeria" },
+  { label: "MERCH", to: "#merch" },
   { label: "REDES", to: "#redes" },
 ];
 
@@ -38,7 +38,7 @@ export default function Nav() {
           <img
             src={LOGO_URL}
             alt="Ride N' Nice"
-            className="h-8 md:h-10 w-auto invert brightness-200"
+            className="h-8 md:h-10 w-auto"
           />
           <span className="hidden sm:inline font-mono text-[10px] tracking-[0.3em] text-ink-300 uppercase">
             Est. 2020 / Crew

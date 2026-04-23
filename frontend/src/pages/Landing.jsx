@@ -3,8 +3,8 @@ import axios from "axios";
 import Nav from "../components/site/Nav";
 import Hero from "../components/site/Hero";
 import About from "../components/site/About";
-import RoutesCarousel from "../components/site/RoutesCarousel";
-import Events from "../components/site/Events";
+import Gallery from "../components/site/Gallery";
+import Merch from "../components/site/Merch";
 import Social from "../components/site/Social";
 import Join from "../components/site/Join";
 import Footer from "../components/site/Footer";
@@ -26,8 +26,8 @@ export default function Landing() {
       <main>
         <Hero />
         <About />
-        <RoutesCarousel />
-        <Events />
+        <Gallery />
+        <Merch />
         <Social />
         <Join />
       </main>

@@ -125,7 +125,7 @@ export default function Hero() {
               <img
                 src={LOGO_URL}
                 alt="Ride N' Nice"
-                className="w-36 md:w-44 h-auto invert brightness-200 opacity-90"
+                className="w-36 md:w-44 h-auto opacity-95"
               />
               <p className="text-ink-200 max-w-sm text-sm md:text-base leading-relaxed">
                 Somos una familia. Nos gustan los coches, las rutas largas, los
@@ -134,12 +134,12 @@ export default function Hero() {
               </p>
               <div className="flex items-center gap-4">
                 <a
-                  href="#rutas"
-                  data-testid="hero-cta-rutas"
+                  href="#galeria"
+                  data-testid="hero-cta-galeria"
                   data-cursor="hover"
                   className="group inline-flex items-center gap-3 bg-white text-black px-6 py-3 font-mono text-[11px] tracking-[0.25em] uppercase hover:bg-ink-100 transition-colors"
                 >
-                  Ver rutas
+                  Ver galería
                   <ArrowDown
                     size={14}
                     className="group-hover:translate-y-0.5 transition-transform"
