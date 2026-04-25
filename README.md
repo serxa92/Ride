@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://customer-assets.emergentagent.com/job_racing-routes/artifacts/c7fnw3j3_Captura%20de%20pantalla%202026-04-23%20231952.png" alt="Ride N' Nice" width="220" />
+<img src="https://customer-assets.emergentagent.com/job_racing-routes/artifacts/c7fnw3j3_Captura%20de%20pantalla%202026-04-23%20231952.png" alt="Ride N' Nice" width="400" />
 
 
 
