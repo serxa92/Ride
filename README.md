@@ -7,14 +7,14 @@
 ### *Comunidad de amantes del motor*
 
 **🌐 [ridennice.vercel.app](https://ridennice.vercel.app/)**
-<div align="center">
+
    
    ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   RIDE   ·  N´  ·   NICE
+               RIDE   ·  N´  ·   NICE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
-</div>
+
 
 
 </div>
