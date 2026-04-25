@@ -65,10 +65,8 @@
 ```
 ┌──────────────────────────────────────────────────────────┐
 │  ▣  HERO              Logo, marquee y motor en marcha    │
-│  ▣  LA FAMILIA        Quiénes somos, sin filtros         │
-│  ▣  RUTAS             Carrusel con las próximas salidas  │
-│  ▣  GALERÍA           Coches de la crew, en grano puro   │
-│  ▣  EVENTOS           Timeline de quedadas y track days  │
+│  ▣  LA FAMILIA        Quiénes somos, sin filtros         │  │
+│  ▣  GALERÍA           Coches de la crew, en grano puro   │  │
 │  ▣  REDES             Síguenos. Etiqueta. Aparece.       │
 │  ▣  ÚNETE A LA CREW   Formulario para entrar al ajo      │
 └──────────────────────────────────────────────────────────┘
