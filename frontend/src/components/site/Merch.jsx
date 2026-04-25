@@ -30,7 +30,7 @@ export default function Merch() {
             MERCH
           </motion.h2>
           <p className="text-ink-300 max-w-md text-sm md:text-base">
-            Lleva el crew contigo: parches, pegatinas, gorras y la soft-shell
+            Lleva la familia contigo: parches, pegatinas, gorras y la soft-shell
             oficial. Haz tu pedido rellenando el formulario — lo recibimos
             directamente en el grupo.
           </p>

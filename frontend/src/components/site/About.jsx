@@ -153,7 +153,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-ink-300 text-base md:text-lg leading-relaxed max-w-xl"
           >
-            Nos da igual si traes un stance limpio, un GTI de serie o el
+            Nos da igual si traes un stance , un GTI de serie o el
             primer coche que te compraste con tus ahorros. Si conduces con
             respeto y te gustan los viajes largos, ya eres uno de los
             nuestros.
@@ -178,7 +178,7 @@ export default function About() {
               <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-100">
                 FILE / 007
                 <br />
-                <span className="text-ink-300">honda del sol · stance</span>
+                <span className="text-ink-300">honda del sol</span>
               </div>
               <span className="w-2.5 h-2.5 bg-white block" />
             </div>

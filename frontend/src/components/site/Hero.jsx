@@ -85,7 +85,7 @@ export default function Hero() {
           42.2406° N · 8.7207° W
         </div>
         <div className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] md:tracking-[0.3em] text-ink-500 uppercase mt-1">
-          Crew · Galicia / España
+          Galicia / España
         </div>
       </div>
 
@@ -133,7 +133,7 @@ export default function Hero() {
               <p className="text-ink-200 max-w-sm text-sm md:text-base leading-relaxed">
                 Somos una familia. Nos gustan los coches, las rutas largas, los
                 viernes a las tantas y el ruido de un buen escape. Sin egos,
-                sin postureo — solo carretera y gente que se respeta.
+                sin postureo, solo carretera y gente que se respeta.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <a

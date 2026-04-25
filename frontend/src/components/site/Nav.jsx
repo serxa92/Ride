@@ -41,7 +41,7 @@ export default function Nav() {
             className="h-7 md:h-10 w-auto"
           />
           <span className="hidden md:inline font-mono text-[10px] tracking-[0.3em] text-ink-300 uppercase">
-            Est. 2020 / Crew
+            Est. 2020 / Familia
           </span>
         </a>
 
