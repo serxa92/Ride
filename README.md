@@ -2,7 +2,7 @@
 
 <img src="https://customer-assets.emergentagent.com/job_racing-routes/artifacts/c7fnw3j3_Captura%20de%20pantalla%202026-04-23%20231952.png" alt="Ride N' Nice" width="220" />
 
-# RIDE N' NICE
+
 
 ### *Comunidad de amantes del motor*
 
@@ -26,7 +26,7 @@
 
 </div>
 
-> Estética **racing zine** · monocromo estricto · tipografía gigante · grano cinemático · esquinas afiladas.
+> Estética **racing ** · monocromo estricto · tipografía gigante · grano cinemático · esquinas afiladas.
 > Sin colores. Sin ruido. Solo asfalto, motor y familia.
 
 ---
@@ -110,23 +110,7 @@ JetBrains Mono     →  stats · specs · 0–9000 RPM
 
 <div align="center">
 
-## ❒ MANIFIESTO
 
-</div>
-
-> **NO COLORES.**
-> Solo blanco, negro y los grises que viven entre ellos.
->
-> **NO ESQUINAS REDONDEADAS.**
-> El asfalto no tiene curvas suaves.
->
-> **NO ITÁLICAS.**
-> Excepto cuando algo va demasiado rápido para mantenerse recto.
->
-> **SÍ FAMILIA.**
-> Siempre.
-
----
 
 <div align="center">
 
