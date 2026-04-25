@@ -10,7 +10,7 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**Una landing en blanco y negro para una crew que vive entre quedadas, rutas y track days.**
+**Una landing  para una familia que vive entre quedadas, rutas y track days.**
 
 </div>
 
