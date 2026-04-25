@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
+import axios from "axios";
 import { IMG, STATS } from "../../lib/data";
 
-function Counter({ value, suffix = "" }) {
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
+
+function Counter({ value }) {
   const [n, setN] = useState(0);
   const ref = useRef(null);
+  const last = useRef(0);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const target = value;
+    const fromVal = last.current;
     const io = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {
@@ -16,8 +23,9 @@ function Counter({ value, suffix = "" }) {
           const tick = (t) => {
             const p = Math.min(1, (t - start) / duration);
             const eased = 1 - Math.pow(1 - p, 3);
-            setN(Math.round(value * eased));
+            setN(Math.round(fromVal + (target - fromVal) * eased));
             if (p < 1) requestAnimationFrame(tick);
+            else last.current = target;
           };
           requestAnimationFrame(tick);
           io.disconnect();
@@ -28,15 +36,51 @@ function Counter({ value, suffix = "" }) {
     io.observe(el);
     return () => io.disconnect();
   }, [value]);
+  return <span ref={ref}>{n}</span>;
+}
+
+function LiveDot() {
   return (
-    <span ref={ref}>
-      {n}
-      {suffix}
+    <span className="relative inline-flex w-2 h-2 ml-1" aria-hidden>
+      <span className="absolute inset-0 rounded-full bg-white animate-ping opacity-70" />
+      <span className="relative inline-block w-2 h-2 rounded-full bg-white" />
     </span>
   );
 }
 
 export default function About() {
+  const [liveMembers, setLiveMembers] = useState(null);
+  const [updatedAt, setUpdatedAt] = useState(null);
+
+  useEffect(() => {
+    let alive = true;
+    const fetchStats = async () => {
+      try {
+        const res = await axios.get(`${API}/community/stats`);
+        if (!alive) return;
+        if (typeof res.data?.members === "number") setLiveMembers(res.data.members);
+        if (res.data?.updated_at) setUpdatedAt(res.data.updated_at);
+      } catch (e) {
+        // keep fallback STATS values
+      }
+    };
+    fetchStats();
+    const id = setInterval(fetchStats, 60000); // refresh every minute
+    return () => {
+      alive = false;
+      clearInterval(id);
+    };
+  }, []);
+
+  const fmtUpdated = updatedAt
+    ? new Date(updatedAt).toLocaleString("es-ES", {
+        day: "2-digit",
+        month: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : null;
+
   return (
     <section
       id="sobre-nosotros"
@@ -83,9 +127,6 @@ export default function About() {
             <h2 className="font-display uppercase leading-[0.85] tracking-tighter text-5xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap">
               LA FAMILIA
             </h2>
-            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-300 mt-5">
-              Crew · No Ego · All Love
-            </p>
           </motion.div>
         </div>
 
@@ -151,22 +192,51 @@ export default function About() {
           data-testid="about-stats"
           className="grid grid-cols-2 md:grid-cols-4 border border-ink-700 divide-x divide-y md:divide-y-0 divide-ink-700"
         >
-          {STATS.map((s) => {
+          {STATS.map((s, idx) => {
             const isNumber = typeof s.value === "number";
+            const isMembersCard = idx === 0;
+            const liveValue =
+              isMembersCard && typeof liveMembers === "number"
+                ? liveMembers
+                : null;
+            const displayValue = isNumber
+              ? liveValue !== null
+                ? liveValue
+                : s.value
+              : s.value;
             return (
               <div
                 key={s.label}
-                className="bg-ink-950 p-5 md:p-10 flex flex-col gap-2 md:gap-3"
+                data-testid={`about-stat-${s.label.toLowerCase()}`}
+                className="bg-ink-950 p-5 md:p-10 flex flex-col gap-2 md:gap-3 relative"
               >
-                <span className="font-display text-[42px] sm:text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight">
-                  {isNumber ? <Counter value={s.value} /> : s.value}
+                <span className="font-display text-[42px] sm:text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight flex items-start gap-1.5">
+                  {isNumber ? <Counter value={displayValue} /> : displayValue}
+                  {isMembersCard && liveValue !== null && (
+                    <span className="mt-3 md:mt-5">
+                      <LiveDot />
+                    </span>
+                  )}
                 </span>
-                <span className="font-mono text-[9px] md:text-xs tracking-[0.2em] md:tracking-[0.25em] uppercase text-ink-300">
+                <span className="font-mono text-[9px] md:text-xs tracking-[0.2em] md:tracking-[0.25em] uppercase text-ink-300 flex items-center gap-2">
                   {s.label}
+                  {isMembersCard && liveValue !== null && (
+                    <span
+                      data-testid="about-stat-live-badge"
+                      className="inline-flex items-center gap-1 px-1.5 py-0.5 border border-white/40 text-white text-[8px] md:text-[9px]"
+                    >
+                      LIVE
+                    </span>
+                  )}
                 </span>
                 {s.sub && (
                   <span className="font-mono text-[8px] md:text-[10px] tracking-[0.2em] md:tracking-[0.25em] uppercase text-ink-500">
                     {s.sub}
+                  </span>
+                )}
+                {isMembersCard && fmtUpdated && (
+                  <span className="font-mono text-[8px] md:text-[9px] tracking-[0.2em] md:tracking-[0.25em] uppercase text-ink-500">
+                    Actualizado · {fmtUpdated}
                   </span>
                 )}
               </div>

@@ -17,45 +17,30 @@ export const IMG = {
     "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/rbt3uzrp_imgi_41_584048082_4064844670404692_6848023895902328188_n.jpg",
   meet:
     "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/fli5fap1_imgi_20_648657963_18046550297734064_6525923687999584452_n.jpg",
+  bmw1:
+    "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/i73i80bk_imgi_33_603915198_18037721324734064_2106656365929293668_n.jpg",
+  golfR:
+    "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/62xhugr8_imgi_34_603759868_18037669025734064_8320494143853509874_n.jpg",
+  leonCupra:
+    "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/obqzyhs4_imgi_35_590397855_18037395905734064_3980991048480075446_n.jpg",
+  golfYellow:
+    "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/k78xzopc_imgi_36_601479343_18037346543734064_8240153733144922200_n.jpg",
+  bmwPinkPurple:
+    "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/a5hnjdw5_imgi_47_549653765_18416705863129233_6915146014784537160_n.jpg",
 };
 
-// Galería — fotos reales del crew
+// Galería — fotos reales del crew (sin descripciones)
 export const GALLERY = [
-  {
-    id: "g-01",
-    code: "F/01",
-    image: IMG.miata,
-    title: "Yellow Stance",
-    caption: "Mazda MX-5 NB saliendo con lluvia.",
-  },
-  {
-    id: "g-02",
-    code: "F/02",
-    image: IMG.gti,
-    title: "GTI MK6",
-    caption: "Negro sobre adoquín, clásico OEM+.",
-  },
-  {
-    id: "g-03",
-    code: "F/03",
-    image: IMG.honda,
-    title: "Accord JDM",
-    caption: "Ruedas doradas, negro profundo, vista al mar.",
-  },
-  {
-    id: "g-04",
-    code: "F/04",
-    image: IMG.crx,
-    title: "Del Sol Slam",
-    caption: "Slammed y elegante en una quedada cualquiera.",
-  },
-  {
-    id: "g-05",
-    code: "F/05",
-    image: IMG.meet,
-    title: "Crew Line-Up",
-    caption: "La familia al completo en concentración.",
-  },
+  { id: "g-01", code: "F/01", image: IMG.bmw1 },
+  { id: "g-02", code: "F/02", image: IMG.golfR },
+  { id: "g-03", code: "F/03", image: IMG.bmwPinkPurple },
+  { id: "g-04", code: "F/04", image: IMG.leonCupra },
+  { id: "g-05", code: "F/05", image: IMG.golfYellow },
+  { id: "g-06", code: "F/06", image: IMG.miata },
+  { id: "g-07", code: "F/07", image: IMG.gti },
+  { id: "g-08", code: "F/08", image: IMG.honda },
+  { id: "g-09", code: "F/09", image: IMG.crx },
+  { id: "g-10", code: "F/10", image: IMG.meet },
 ];
 
 // Merchandising

@@ -99,8 +99,8 @@ export default function Hero() {
         >
           <div className="flex items-center gap-3 mb-5 md:mb-8">
             <span className="w-8 md:w-10 h-px bg-white" />
-            <span className="font-mono text-[9px] md:text-xs tracking-[0.25em] md:tracking-[0.3em] text-ink-200 uppercase">
-              Crew · Familia · Desde 2020
+            <span className="font-mono text-[9px] md:text-xs tracking-[0.25em] md:tracking-[0.3em] text-ink-300 uppercase">
+              Galicia · Desde 2020
             </span>
           </div>
 
@@ -108,14 +108,17 @@ export default function Hero() {
             <div className="col-span-12 lg:col-span-8">
               <h1
                 data-testid="hero-headline"
-                className="font-display uppercase leading-[0.82] tracking-tighter text-[22vw] sm:text-[18vw] lg:text-[11vw] xl:text-[10.5rem]"
+                className="font-display uppercase tracking-tighter text-[22vw] sm:text-[18vw] lg:text-[11vw] xl:text-[10.5rem]"
               >
-                <span className="block">RIDE</span>
-                <span className="block -mt-2 md:-mt-4 pl-[8%] md:pl-[14%] flex items-center gap-2 md:gap-4">
-                  <span className="hidden md:inline-block h-[0.9em] w-[3px] bg-white" />
+                <span className="block leading-[1.05]">RIDE</span>
+                <span className="block leading-[1.05] mt-1 md:mt-2 pl-[8%] md:pl-[14%] flex items-center gap-2 md:gap-4">
+                  <span className="hidden md:inline-block h-[0.7em] w-[3px] bg-white" />
                   N&rsquo;
                 </span>
-                <span className="glitch-text block -mt-2 md:-mt-4" data-text="NICE">
+                <span
+                  className="glitch-text block leading-[1.05] mt-1 md:mt-2"
+                  data-text="NICE"
+                >
                   NICE
                 </span>
               </h1>

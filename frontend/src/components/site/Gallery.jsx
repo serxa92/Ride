@@ -38,8 +38,6 @@ export default function Gallery() {
   const prev = () => emblaApi && emblaApi.scrollPrev();
   const next = () => emblaApi && emblaApi.scrollNext();
 
-  const current = GALLERY[selected] || GALLERY[0];
-
   return (
     <section
       id="galeria"
@@ -49,7 +47,7 @@ export default function Gallery() {
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 mb-10 md:mb-14">
         <div className="flex items-end justify-between mb-6">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-300">
-            § 02 / Fotos del crew
+            § 02
           </span>
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink-500">
             {String(selected + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
@@ -62,14 +60,10 @@ export default function Gallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="font-display uppercase leading-[0.82] tracking-tighter text-6xl sm:text-7xl md:text-9xl"
+            className="font-display uppercase leading-[0.85] tracking-tighter text-6xl sm:text-7xl md:text-9xl"
           >
             GALERÍA
           </motion.h2>
-          <p className="text-ink-300 max-w-md text-sm md:text-base">
-            Un recorrido visual por las quedadas, rutas y concentraciones.
-            Cada foto, una historia. Haz click para verla en grande.
-          </p>
         </div>
       </div>
 
@@ -93,7 +87,7 @@ export default function Gallery() {
                   <div className="aspect-[4/5] md:aspect-[3/4] overflow-hidden">
                     <img
                       src={g.image}
-                      alt={g.title}
+                      alt=""
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]"
                     />
@@ -107,15 +101,6 @@ export default function Gallery() {
                       <Maximize2 size={14} />
                     </span>
                   </div>
-
-                  <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
-                    <h3 className="font-display uppercase tracking-tight text-2xl md:text-3xl leading-none">
-                      {g.title}
-                    </h3>
-                    <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ink-200 mt-2">
-                      {g.caption}
-                    </p>
-                  </figcaption>
                 </div>
 
                 <span className="absolute -top-6 -left-2 font-mono text-[10px] tracking-[0.25em] uppercase text-ink-500">
@@ -148,7 +133,7 @@ export default function Gallery() {
             </button>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap justify-end max-w-[60%]">
             {GALLERY.map((_, i) => (
               <button
                 key={i}
@@ -161,12 +146,6 @@ export default function Gallery() {
               />
             ))}
           </div>
-        </div>
-
-        <div className="max-w-[1600px] mx-auto px-6 md:px-10 mt-6 md:mt-8">
-          <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-500">
-            Actual: {current.code} · {current.title}
-          </span>
         </div>
       </div>
 
@@ -194,18 +173,13 @@ export default function Gallery() {
           >
             <img
               src={lightbox.image}
-              alt={lightbox.title}
+              alt=""
               className="w-full max-h-[85vh] object-contain"
             />
             <figcaption className="mt-4 flex items-center justify-between gap-4">
-              <div>
-                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-300">
-                  {lightbox.code}
-                </span>
-                <h4 className="font-display uppercase tracking-tight text-2xl md:text-3xl leading-none mt-1">
-                  {lightbox.title}
-                </h4>
-              </div>
+              <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-300">
+                {lightbox.code}
+              </span>
               <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-300 hidden md:inline">
                 Esc · cerrar
               </span>
