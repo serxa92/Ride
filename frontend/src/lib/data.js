@@ -50,8 +50,8 @@ export const MERCH_FORM_URL =
 export const MERCH = [
   {
     id: "m-patch",
-    name: "Parches bordados",
-    tagline: "Ride N' Nice · iron-on",
+    name: "Llaveros",
+    tagline: "Ride N' Nice",
     image:
       "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/lupu62sp_Captura%20de%20pantalla%202026-04-23%20232330.png",
   },

@@ -30,8 +30,7 @@ export default function Merch() {
             MERCH
           </motion.h2>
           <p className="text-ink-300 max-w-md text-sm md:text-base">
-            Lleva la familia contigo: parches, pegatinas, gorras y la soft-shell
-            oficial. Haz tu pedido rellenando el formulario — lo recibimos
+            Lleva la familia contigo: llaveros, pegatinas, gorras,la soft-shell, y mucho más. Haz tu pedido rellenando el formulario — lo recibimos
             directamente en el grupo.
           </p>
         </div>
@@ -98,7 +97,7 @@ export default function Merch() {
           <ArrowUpRight size={22} className="hidden md:inline" />
         </a>
         <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-ink-500 mt-4">
-          Formulario Google · respuesta gestionada por el crew
+          Formulario Google · respuesta gestionada por los admins
         </p>
       </div>
     </section>
