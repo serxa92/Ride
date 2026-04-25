@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "create-react-app",
-  "installCommand": "yarn install --frozen-lockfile=false",
+  "framework": null,
+  "installCommand": "yarn install --network-timeout 600000",
   "buildCommand": "yarn build",
   "outputDirectory": "build"
 }
