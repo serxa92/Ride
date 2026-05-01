@@ -27,6 +27,21 @@ export const IMG = {
     "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/k78xzopc_imgi_36_601479343_18037346543734064_8240153733144922200_n.jpg",
   bmwPinkPurple:
     "https://customer-assets.emergentagent.com/job_racing-routes/artifacts/a5hnjdw5_imgi_47_549653765_18416705863129233_6915146014784537160_n.jpg",
+  // Fotos locales
+  local01: "/gallery/_MG_9853.png",
+  local02: "/gallery/20250511_193455.jpg",
+  local03: "/gallery/ASC05600.jpg",
+  local04: "/gallery/IMG_6434.JPG",
+  local05: "/gallery/IMG-20250225-WA0127.jpg",
+  local06: "/gallery/IMG-20250406-WA0186.jpg",
+  local07: "/gallery/IMG-20250915-WA0054.jpg",
+  local08: "/gallery/IMG-20250916-WA0050.jpg",
+  local09: "/gallery/SAVE_20240818_111012.jpg",
+  local10: "/gallery/SAVE_20240927_212148.jpg",
+  local11: "/gallery/SAVE_20241108_081022.jpg",
+  local12: "/gallery/ZET02699.jpg",
+  local13: "/gallery/ZET02721.jpg",
+  local14: "/gallery/ZET02915.jpg",
 };
 
 // Galería — fotos reales del crew (sin descripciones)
@@ -41,6 +56,20 @@ export const GALLERY = [
   { id: "g-08", code: "F/08", image: IMG.honda },
   { id: "g-09", code: "F/09", image: IMG.crx },
   { id: "g-10", code: "F/10", image: IMG.meet },
+  { id: "g-11", code: "F/11", image: IMG.local01 },
+  { id: "g-12", code: "F/12", image: IMG.local02 },
+  { id: "g-13", code: "F/13", image: IMG.local03 },
+  { id: "g-14", code: "F/14", image: IMG.local04 },
+  { id: "g-15", code: "F/15", image: IMG.local05 },
+  { id: "g-16", code: "F/16", image: IMG.local06 },
+  { id: "g-17", code: "F/17", image: IMG.local07 },
+  { id: "g-18", code: "F/18", image: IMG.local08 },
+  { id: "g-19", code: "F/19", image: IMG.local09 },
+  { id: "g-20", code: "F/20", image: IMG.local10 },
+  { id: "g-21", code: "F/21", image: IMG.local11 },
+  { id: "g-22", code: "F/22", image: IMG.local12 },
+  { id: "g-23", code: "F/23", image: IMG.local13 },
+  { id: "g-24", code: "F/24", image: IMG.local14 },
 ];
 
 // Merchandising
